@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  rabbitmq:
+    host: 15.168.47.94
+    port: 5672
+    username: guest
+    password: guest
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+#          uri: file:///C:\Users\icore\Desktop\dowon\koscom-msa\git-local-repo
+#          uri: file:///Users/dowonlee_1/Desktop/git/koscom-msa/git-local-repo2
+          uri: file:///C:\Users\KOSCOM\IdeaProjects\koscom-msa\git-local-repo2
+#          uri: https://github.com/joneconsulting/spring-cloud-config
+          default-label: master
+      enabled: true
+#        native:
+#          search-locations: file:///C:\Users\icore\Desktop\dowon\koscom-msa\git-local-repo
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh, refresh, metrics
