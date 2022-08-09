@@ -1,2 +1,2 @@
 # msa-spring-cloud
-spring msa
+msa spring cloud
